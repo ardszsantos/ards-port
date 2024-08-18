@@ -42,6 +42,11 @@ body {
   transform-origin: left top;
 }
 
+.headerNavBar a {
+  text-decoration: none;
+  color: white;
+}
+
 .modeToggle {
   transform-origin: left top;
   transform: rotate(-90deg);

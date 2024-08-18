@@ -1,42 +1,21 @@
 import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Contact from './pages/Contact';
 
 function App() {
   return (
-    <div className="App">
-      <div className='headerHr'></div>
-      <section className='header'>
-        <div className='headerTopContent'>
-          <h1 className='headerLogo'>ards.dev</h1>
-          <p>serviços</p>
-        </div>
-
-        {/* Centered Text */}
-        <div className='headerCenterWrapper'>
-          <div className='headerCenterDiv'>
-            <h1>front-end. web(developer)_</h1>
-          </div>
-        </div>
-
-        <div className='headerNavBar'>
-          <p><a>Home</a></p>
-          <p><a>cases</a></p>
-          <p><a>projects</a></p>
-          <p><a>about me</a></p>
-          <p><a>contact</a></p>
-        </div>
-
-        <div className='modeToggle'>
-          <p>light mode</p>
-        </div>
-      </section>
-
-      <section className='cases'></section>
-      <section className='projects'></section>
-      <section className='about'></section>
-      <section className='contact'></section>
-      <section className='footer'></section>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/contact" element={<Contact />} /> 
+      {/*    <Route path="/projects" element={<Projects />} />
+        <Route path="/about-me" element={<AboutMe />} />
+        <Route path="/contact" element={<Contact />} /> */}
+      </Routes>
+    </Router>
   );
 }
 
