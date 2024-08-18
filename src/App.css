@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
 
 * {
-  background-color: #000000;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  max-height: 100vh; 
+  max-height: 100vh;
+}
+
+body {
+  background-color: #000000;
 }
 
 .headerHr {
@@ -31,13 +34,12 @@
 
 .headerNavBar {
   display: flex;
-  gap: 26px; 
+  gap: 26px;
   width: fit-content;
   margin-top: 34.25em;
   margin-left: 4em;
   transform: rotate(-90deg);
   transform-origin: left top;
-  
 }
 
 .modeToggle {
@@ -47,12 +49,24 @@
   width: fit-content;
 }
 
+/* New grid setup for centering without affecting layout */
+.headerCenterWrapper {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none; /* Ensures it doesn't affect clickability of other content */
+  z-index: -1; /* Makes sure it stays behind everything else */
+}
+
 .headerCenterDiv {
-  position: absolute;
-  left: 28%; /* 540px / 1920px * 100 */
-  top: 40%; /* 330px / 1080px * 100 */
   text-align: center;
   font-family: "DotGothic16", sans-serif;
   font-size: 45px;
   font-weight: 100;
+  pointer-events: auto; /* Allows interaction with the centered text */
+  z-index: 1;
 }
