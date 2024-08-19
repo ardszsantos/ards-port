@@ -1,13 +1,13 @@
 import React from 'react';
 import MainNav from '../components/mainNav';
 
-function Contact() {
+function Aboutme() {
   return (
     <div>
       <MainNav/>
-      Contact
+      Aboutme
     </div>
   );
 }
 
-export default Contact;
+export default Aboutme;

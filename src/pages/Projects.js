@@ -1,13 +1,13 @@
 import React from 'react';
 import MainNav from '../components/mainNav';
 
-function Contact() {
+function Projects() {
   return (
     <div>
       <MainNav/>
-      Contact
+      Projects
     </div>
   );
 }
 
-export default Contact;
+export default Projects;
