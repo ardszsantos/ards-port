@@ -1,17 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/App.css'
+import { Squash as Hamburger } from 'hamburger-react';
+import '../styles/App.css';
 
 function MainNav() {
+  const [isOpen, setOpen] = useState(false);
+
   return (
     <div className="App">
       <div className='headerHr'></div>
       <section className='header'>
         <div className='headerTopContent'>
           <h1 className='headerLogo'>ards.dev</h1>
-          <p>serviços</p>
+          
+          {/* Hamburger only shows on small screens */}
+          <div className="hamburger-menu">
+            <Hamburger toggled={isOpen} toggle={setOpen} />
+          </div>
         </div>
-        <div className='headerNavBar'>
+
+        {/* Navbar always visible on larger screens, toggled on smaller screens */}
+        <div className={`headerNavBar ${isOpen ? 'show' : ''}`}>
           <p><Link to="/">Home</Link></p>
           <p><Link to="/cases">Cases</Link></p>
           <p><Link to="/projects">Projects</Link></p>

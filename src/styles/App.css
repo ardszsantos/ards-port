@@ -75,3 +75,62 @@ body {
   pointer-events: auto; /* Allows interaction with the centered text */
   z-index: 1;
 }
+
+.hamburger-menu {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .headerCenterDiv {
+    font-size: 33px;
+  }
+
+  .headerNavBar {
+    margin-top: 28.25em;
+  }
+}
+
+@media (max-width: 800px) {
+  .headerTopContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .headerLogo {
+    font-size: 21px;
+  }
+
+  .hamburger-menu {
+    display: block; /* Show hamburger on small screens */
+    display: flex;
+    align-items: center;
+  }
+
+  .headerNavBar {
+    display: none; /* Hide regular navbar on small screens */
+  }
+
+  .headerNavBar.show {
+    display: flex;
+    gap: 26px;
+    font-size: 15px;
+    width: fit-content;
+    margin-top: 27.25em;
+    margin-left: 1em;
+    transform: rotate(-90deg);
+    transform-origin: left top;
+  }
+
+  .headerCenterDiv {
+    font-size: 12px;
+  }
+
+  .headerCenterWrapper {
+    height: 84vh;
+  }
+
+  .modeToggle {
+    display: none;
+  }
+}
