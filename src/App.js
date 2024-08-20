@@ -9,6 +9,7 @@ import Aboutme from './pages/Aboutme';
 import Projects from './pages/Projects';
 import Cases from './pages/Cases';
 import MainNav from './components/mainNav';
+import { DarkModeProvider, DarkModeContext } from './hooks/DarkModeContext'; 
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
@@ -28,42 +29,47 @@ function App() {
 
 
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <GlobalStyles
-        styles={{
-          body: {
-            color: theme.palette.text.primary, 
-            backgroundColor: theme.palette.background.default, 
-          },
-          h1: {
-            color: theme.palette.text.primary, 
-          },
-          p: {
-            color: theme.palette.text.primary,
-          },
-          '.headerHr': {
-            backgroundColor: theme.palette.text.primary, // Change the div color
-          },
-          a: {
-            color: `${theme.palette.text.primary} !important`, // Apply theme-based color to links
+    <DarkModeProvider> 
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <GlobalStyles
+          styles={{
+            body: {
+              color: theme.palette.text.primary, 
+              backgroundColor: theme.palette.background.default, 
+            },
+            h1: {
+              color: theme.palette.text.primary, 
+            },
+            p: {
+              color: theme.palette.text.primary,
+            },
+            '.headerHr, .contactHr': {
+              backgroundColor: theme.palette.text.primary, // Change the div color
+            },
+            a: {
+              color: `${theme.palette.text.primary} !important`, // Apply theme-based color to links
 
-          },
-          
-        }}
-      />
-      <Router>
-        {/* Pass setDarkMode and darkMode to MainNav */}
-        <MainNav setDarkMode={setDarkMode} darkMode={darkMode} />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/cases" element={<Cases />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/about-me" element={<Aboutme />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </Router>
-    </ThemeProvider>
+            },
+            'svg': {
+              stroke: theme.palette.text.primary, // Apply stroke color based on the theme
+            },
+            
+          }}
+        />
+        <Router>
+          {/* Pass setDarkMode and darkMode to MainNav */}
+          <MainNav setDarkMode={setDarkMode} darkMode={darkMode} />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/cases" element={<Cases />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/about-me" element={<Aboutme />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </Router>
+      </ThemeProvider>
+    </DarkModeProvider>
   );
 }
 

@@ -1,0 +1,28 @@
+.contactContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 25vh;
+  left: 31vw;
+}
+
+.contactH1 {
+  font-size: 91px;
+  font-weight: bolder;
+}
+
+.contactHr {
+  background-color: white;
+  width: 90px;
+  height: 7px;
+  margin-top: 9px
+}
+
+.contactSocials {
+  margin-top: 7vh;
+  display: flex;
+  gap: 90px;
+}
+
