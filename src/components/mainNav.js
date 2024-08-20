@@ -3,8 +3,16 @@ import { Link } from 'react-router-dom';
 import { Squash as Hamburger } from 'hamburger-react';
 import '../styles/App.css';
 
-function MainNav() {
+function MainNav({ setDarkMode, darkMode }) {
   const [isOpen, setOpen] = useState(false);
+
+  const handleToggle = () => {
+    if (typeof setDarkMode === 'function') {
+      setDarkMode((prevMode) => !prevMode);
+    } else {
+      console.error('setDarkMode is not a function');
+    }
+  };
 
   return (
     <div className="App">
@@ -13,13 +21,11 @@ function MainNav() {
         <div className='headerTopContent'>
           <h1 className='headerLogo'>ards.dev</h1>
           
-          {/* Hamburger only shows on small screens */}
           <div className="hamburger-menu">
             <Hamburger toggled={isOpen} toggle={setOpen} />
           </div>
         </div>
 
-        {/* Navbar always visible on larger screens, toggled on smaller screens */}
         <div className={`headerNavBar ${isOpen ? 'show' : ''}`}>
           <p><Link to="/">Home</Link></p>
           <p><Link to="/cases">Cases</Link></p>
@@ -28,8 +34,9 @@ function MainNav() {
           <p><Link to="/contact">Contact</Link></p>
         </div>
 
-        <div className='modeToggle'>
-          <p>light mode</p>
+        {/* Theme Toggle */}
+        <div className='modeToggle' onClick={handleToggle}>
+          <p>{darkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}</p>
         </div>
       </section>
     </div>

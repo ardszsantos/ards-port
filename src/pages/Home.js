@@ -1,11 +1,9 @@
 import '../styles/App.css'
-import MainNav from '../components/mainNav';
 
 
 function Home() {
   return (
     <div className="App">
-      <MainNav/>
       <section className='header'>
         {/* Centered Text */}
         <div className='headerCenterWrapper'>
