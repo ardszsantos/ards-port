@@ -44,7 +44,7 @@ function App() {
             p: {
               color: theme.palette.text.primary,
             },
-            '.headerHr, .contactHr': {
+            '.headerHr, .contactHr, .footerHr, .bioBoxVr': {
               backgroundColor: theme.palette.text.primary, // Change the div color
             },
             a: {
@@ -53,6 +53,9 @@ function App() {
             },
             'svg': {
               stroke: theme.palette.text.primary, // Apply stroke color based on the theme
+            },
+            '.bioBox': {
+              backgroundColor: theme.palette.background.default,
             },
             
           }}

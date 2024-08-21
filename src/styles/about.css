@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+
+.mainWrapper {
+  position: absolute;
+  top: 15vh;
+  left: 18.6vw;
+}
+
+.bioWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bioText {
+  margin-left: 71px;
+  text-align: left;
+}
+
+.bioH1 {
+  font-size: 30px;
+  font-family: "Manrope", sans-serif;
+  margin-bottom: 13px;
+  font-weight: 300;
+  
+}
+
+.bioP {
+  font-size: 14px;
+  font-family: "Manrope", sans-serif;
+  max-width: 761px;
+  font-weight: lighter;
+  line-height: 2;
+}
+
+.profileImg {
+  border-radius: 151px;
+}
+
+.bioBoxes {
+  display: flex;
+  gap: 34px;
+  margin-top: 74px;
+  
+}
+
+.bioBox {
+  width: 278px;
+  height: 72px;
+  background-color: black;
+  border-radius: 13px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bioBoxVr {
+  margin: 17px;
+  height: 45px;
+  width: 1px;
+  background-color: white;
+}
+
+.bioTextWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.bioBoxSubP {
+  font-weight: 100;
+  font-size: 10px;
+}
