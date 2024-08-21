@@ -20,7 +20,9 @@ function MainNav({ setDarkMode, darkMode }) {
       <section className='header'>
         <div className='headerTopContent'>
           <h1 className='headerLogo'>ards.dev</h1>
-          
+          <div className='modeToggle' onClick={handleToggle}>
+            <p>{darkMode ? 'Light Mode' : 'Dark Mode'}</p>
+          </div>
           <div className="hamburger-menu">
             <Hamburger toggled={isOpen} toggle={setOpen} />
           </div>
@@ -35,10 +37,13 @@ function MainNav({ setDarkMode, darkMode }) {
         </div>
 
         {/* Theme Toggle */}
-        <div className='modeToggle' onClick={handleToggle}>
-          <p>{darkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}</p>
-        </div>
+
       </section>
+      <footer className='navFooter'>
+        <div className='footerHr'></div>
+        <p className='footerP'>Todos os direitos reservados &copy; Alexandre Rodrigues </p>
+        <p>2024</p>
+      </footer>
     </div>
   );
 }

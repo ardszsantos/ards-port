@@ -5,11 +5,11 @@
   align-items: center;
   position: absolute;
   top: 25vh;
-  left: 31vw;
+  left: 33vw;
 }
 
 .contactH1 {
-  font-size: 91px;
+  font-size: 90px;
   font-weight: bolder;
 }
 
@@ -25,4 +25,3 @@
   display: flex;
   gap: 90px;
 }
-
