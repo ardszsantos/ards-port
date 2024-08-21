@@ -71,3 +71,40 @@
   font-weight: 100;
   font-size: 10px;
 }
+
+.bioResume {
+  margin-top: 63px;
+  margin-left: 2.1vw;
+  display: flex;
+  gap: 220px;
+}
+
+
+.bioResumeWrapper{
+  display: flex;
+  align-items: center;
+}
+
+.bioResumeText {
+  display: flex;
+  flex-direction: column;
+}
+
+.bioResumeHr {
+  margin: 17px;
+  height: 226px;
+  width: 1px;
+  background-color: white;
+}
+
+.bioResumeP {
+  font-weight: bold;
+  margin-bottom: 1vh;
+ 
+}
+
+.bioResumeSubP {
+  font-weight: 100;
+  font-size: 14px;
+}
+
