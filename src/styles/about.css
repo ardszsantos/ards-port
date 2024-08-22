@@ -35,6 +35,8 @@
 }
 
 .profileImg {
+  height: 198px;
+  width: 198px;
   border-radius: 151px;
 }
 
@@ -100,7 +102,6 @@
 .bioResumeP {
   font-weight: bold;
   margin-bottom: 1vh;
- 
 }
 
 .bioResumeSubP {
