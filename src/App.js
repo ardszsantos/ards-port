@@ -7,9 +7,10 @@ import Home from './pages/Home';
 import Contact from './pages/Contact';
 import Aboutme from './pages/Aboutme';
 import Projects from './pages/Projects';
-import Cases from './pages/Cases';
+
 import MainNav from './components/mainNav';
 import { DarkModeProvider, DarkModeContext } from './hooks/DarkModeContext'; 
+import Footer from './components/footer';
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
@@ -21,7 +22,7 @@ function App() {
         default: darkMode ? '#000000' : '#ffffff', 
       },
       text: {
-        primary: darkMode ? '#f1f2f6' : '#000000', 
+        primary: darkMode ? '#ffffff' : '#000000', 
       },
     },
   });
@@ -44,7 +45,7 @@ function App() {
             p: {
               color: theme.palette.text.primary,
             },
-            '.headerHr, .contactHr, .footerHr, .bioBoxVr': {
+            '.headerHr, .contactHr, .footerHr, .bioBoxVr, .bioResumeHr': {
               backgroundColor: theme.palette.text.primary, // Change the div color
             },
             a: {
@@ -55,7 +56,7 @@ function App() {
               stroke: theme.palette.text.primary, // Apply stroke color based on the theme
             },
             '.bioBox': {
-              backgroundColor: theme.palette.background.default,
+              backgroundColor: `${theme.palette.background.default} !important`
             },
             
           }}
@@ -65,11 +66,11 @@ function App() {
           <MainNav setDarkMode={setDarkMode} darkMode={darkMode} />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/cases" element={<Cases />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/about-me" element={<Aboutme />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
+          <Footer/>
         </Router>
       </ThemeProvider>
     </DarkModeProvider>

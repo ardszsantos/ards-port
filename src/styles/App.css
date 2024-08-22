@@ -7,6 +7,8 @@
   padding: 0;
   box-sizing: border-box;
   max-height: 100vh;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 
 body {
@@ -33,18 +35,27 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: absolute;
+}
+
+.headerTopContentBetween {
+  display: flex;
+  justify-content: space-between;
+  gap: 79vw;
+  align-items: center;
 }
 
 .headerNavBar {
   display: flex;
   gap: 26px;
-  width: fit-content;
-  margin-top: 34.25em;
-  margin-left: 4em;
-  transform: rotate(-90deg);
+  position: absolute;
+  left: 4em;
+  top: 65%;
+  transform: translateY(-10%) rotate(-90deg); /* This centers it vertically while keeping the rotation */
   transform-origin: left top;
   font-family: "Manrope", sans-serif;
 }
+
 
 .headerNavBar a {
   text-decoration: none;
@@ -57,24 +68,21 @@ body {
   width: fit-content;
 }
 
-/* New grid setup for centering without affecting layout */
 .headerCenterWrapper {
   display: grid;
   place-items: center;
-  position: fixed;
-  top: 38vh;
-  left: 29vw;
-  pointer-events: none; /* Ensures it doesn't affect clickability of other content */
-  z-index: -1; /* Makes sure it stays behind everything else */
+  min-height: 100vh;
+  width: 100vw;
+  pointer-events: none; 
+  margin-left: 3em;
 }
 
 .headerCenterDiv {
   text-align: center;
   font-family: "DotGothic16", sans-serif;
-  font-size: 45px;
+  font-size: 60px;
   font-weight: 100;
-  pointer-events: auto; /* Allows interaction with the centered text */
-  z-index: 1;
+  pointer-events: auto; 
 }
 
 .hamburger-menu {
@@ -138,20 +146,25 @@ body {
 
 
 .navFooter {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  padding-bottom: 1em;
+   /* Optional for a little space between the footer content and the bottom */
 }
 
 .footerHr {
-  justify-content: center;
-  height: 0.5vh;
   width: 24vw;
+  height: 0.5vh;
   background-color: white;
-  margin-top: 18vh;
-  margin-bottom: 2vh;
+  margin-bottom: 0.5vw;
 }
 
-.footerP{
+.footerP {
   font-family: "Manrope", sans-serif;
 }
