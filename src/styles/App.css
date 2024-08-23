@@ -87,62 +87,10 @@ body {
 
 .hamburger-menu {
   display: none;
+
 }
 
-@media (max-width: 1024px) {
-  .headerCenterDiv {
-    font-size: 33px;
-  }
 
-  .headerNavBar {
-    margin-top: 28.25em;
-  }
-}
-
-@media (max-width: 800px) {
-  .headerTopContent {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .headerLogo {
-    font-size: 21px;
-  }
-
-  .hamburger-menu {
-    display: block; /* Show hamburger on small screens */
-    display: flex;
-    align-items: center;
-  }
-
-  .headerNavBar {
-    display: none; /* Hide regular navbar on small screens */
-  }
-
-  .headerNavBar.show {
-    display: flex;
-    gap: 26px;
-    font-size: 15px;
-    width: fit-content;
-    margin-top: 27.25em;
-    margin-left: 1em;
-    transform: rotate(-90deg);
-    transform-origin: left top;
-  }
-
-  .headerCenterDiv {
-    font-size: 12px;
-  }
-
-  .headerCenterWrapper {
-    height: 84vh;
-  }
-
-  .modeToggle {
-    display: none;
-  }
-}
 
 
 .navFooter {
@@ -155,7 +103,7 @@ body {
   align-items: center;
   width: 100%;
   padding-bottom: 1em;
-   /* Optional for a little space between the footer content and the bottom */
+  /* Optional for a little space between the footer content and the bottom */
 }
 
 .footerHr {
@@ -167,4 +115,74 @@ body {
 
 .footerP {
   font-family: "Manrope", sans-serif;
+}
+
+@media (max-width: 1024px) {
+  .headerCenterDiv {
+    font-size: 33px;
+  }
+
+  .headerNavBar {
+    margin-top: 28.25em;
+  }
+  
+}
+
+@media (max-width: 800px) {
+  .headerTopContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 33vw;
+  }
+
+  .headerLogo {
+    font-size: 21px;
+  }
+
+  .hamburger-menu {
+    display: block; /* Show hamburger on small screens */
+    align-items: center;
+  }
+
+  .headerNavBar {
+    display: none; /* Hide regular navbar on small screens */
+    margin-bottom: 12em;
+  }
+
+  .headerNavBar.show {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    font-size: 15px;
+    width: fit-content;
+    transform: none;
+    margin-top: -29em;
+    margin-right: 1em;
+    transform: translateX(14em);
+    
+    padding: 10px;
+    
+  }
+
+  .headerCenterDiv {
+    font-size: 12px;
+    margin-right: 6em;
+  }
+
+  .headerCenterWrapper {
+    min-width: 100vw;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .modeToggle {
+    display: none;
+  }
+
+  .footerP {
+    font-size: 10px;
+  }
 }

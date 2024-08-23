@@ -8,7 +8,7 @@ function Footer() {
       <footer className='navFooter'>
         <div className='footerHr'></div>
         <p className='footerP'>Todos os direitos reservados &copy; Alexandre Rodrigues </p>
-        <p>2024</p>
+        <p className='footerP'>2024</p>
       </footer>
   );
 }

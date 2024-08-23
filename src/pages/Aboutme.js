@@ -88,7 +88,6 @@ function Aboutme() {
           </div>
         </div>
       </div>
-
     </div>
   );
 }
