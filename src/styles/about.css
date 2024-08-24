@@ -109,3 +109,18 @@
   font-size: 14px;
 }
 
+
+
+@media (max-width: 1440px) {
+  .headerLogo {
+    font-size: 15px;
+  }
+
+  .mainWrapper {
+    position: absolute;
+    top: 8vh;
+    left: 9vw;
+    transform: scale(0.9);
+  }
+
+}
