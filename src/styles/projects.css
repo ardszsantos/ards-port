@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+
+.projectsWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 70vh;
+  margin: 8em auto;
+  box-sizing: border-box;
+}
+
+.project-slide, .empty-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.project-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.project-box {
+  width: 48%; /* Adjust width to your liking */
+  height: 300px; /* Adjust height based on your design */
+  border: 1px solid #ccc; /* Border to see the box layout */
+   /* Set any background color for visibility */
+  display: flex;
+  justify-content: left;
+  margin: 1em;
+  align-items: center;
+  padding: 1em;
+}
+
+
+.projectBoxImage {
+  margin-right: 1em;
+}
+
+.projectBoxText {
+  font-family: "Manrope", sans-serif;
+}
