@@ -1,0 +1,32 @@
+.gallery-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gallery img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  margin: 10px 20px 0px;
+  border: solid 1px white;
+  border-radius: 8px;
+}
+
+.gallery-controls {
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+  margin-top: 10px;
+}
+
+.gallery-nav {
+  font-size: 1rem;
+  cursor: pointer;
+  user-select: none;
+  color: white;
+}
+
+.gallery-nav:hover {
+  color: #333;
+}
