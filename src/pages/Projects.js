@@ -50,12 +50,11 @@ const projects = [
   ],
   [
     {
-      title: 'Project 5',
-      description: 'Description of Project 5',
+      title: 'Foodi Landing Page',
+      description: 'projeto feito com React & Tailwind ',
             images: [
-        'ecommerce3.png',
-        'ecommerce2.png',
-        'ecommerce1.png',
+        'foodi1.png',
+        'foodi2.png',
       ],
     },
     {
