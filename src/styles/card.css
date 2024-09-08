@@ -1,0 +1,35 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: #2c3e50;
+  justify-content: center;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-image img {
+  border-radius: 10px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  width: 300px;
+  object-fit: cover;
+  height: 200px;
+}
+
+.card-text {
+  padding: 10px;
+  display: flex;
+  gap: 30px;
+}
+
+.card-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
