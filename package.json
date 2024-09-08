@@ -2,7 +2,7 @@
   "name": "ards-port",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://ardszsantos.github.io/",
+  "homepage": "http://ardszsantos.github.io/ards-port",
   "dependencies": {
     "@emotion/react": "^11.13.0",
     "@emotion/styled": "^11.13.0",

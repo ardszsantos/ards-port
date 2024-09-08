@@ -9,7 +9,7 @@ function Aboutme() {
   return (
     <div className='mainWrapper'>
       <div className='bioWrapper'>
-        <img className='profileImg' src='fred.webp'></img>
+        <img className='profileImg' src={`${process.env.PUBLIC_URL}/fred.webp`}></img>
         <div className='bioText'>
           <h1 className='bioH1'>Alexandre Rodrigues</h1>
           <p className='bioP'>I'm a versatile developer, working across various technologies, with a strong focus on web development. My projects range from fullstack development to building functional and efficient web systems. I prefer practical solutions and approaches, working on diverse projects from my home office in São Paulo, Brazil, always looking to improve and grow as a programmer.</p>
